@@ -1,0 +1,8 @@
+D:\RPAIzredni\PrvaVaja\PrvaVaja\bin\Debug\PrvaVaja.exe.config
+D:\RPAIzredni\PrvaVaja\PrvaVaja\bin\Debug\PrvaVaja.exe
+D:\RPAIzredni\PrvaVaja\PrvaVaja\bin\Debug\PrvaVaja.pdb
+D:\RPAIzredni\PrvaVaja\PrvaVaja\obj\Debug\PrvaVaja.csproj.AssemblyReference.cache
+D:\RPAIzredni\PrvaVaja\PrvaVaja\obj\Debug\PrvaVaja.csproj.SuggestedBindingRedirects.cache
+D:\RPAIzredni\PrvaVaja\PrvaVaja\obj\Debug\PrvaVaja.csproj.CoreCompileInputs.cache
+D:\RPAIzredni\PrvaVaja\PrvaVaja\obj\Debug\PrvaVaja.exe
+D:\RPAIzredni\PrvaVaja\PrvaVaja\obj\Debug\PrvaVaja.pdb
