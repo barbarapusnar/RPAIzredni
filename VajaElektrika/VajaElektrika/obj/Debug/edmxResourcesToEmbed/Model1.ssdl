@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ElektrikaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Meritve">
+    <Key>
+      <PropertyRef Name="ZapisID" />
+    </Key>
+    <Property Name="ZapisID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ZapisČas" Type="datetime" />
+    <Property Name="V1" Type="real" />
+    <Property Name="A1" Type="real" />
+    <Property Name="kW1" Type="real" />
+    <Property Name="V2" Type="real" />
+    <Property Name="A2" Type="real" />
+    <Property Name="kW2" Type="real" />
+    <Property Name="V3" Type="real" />
+    <Property Name="A3" Type="real" />
+    <Property Name="kW3" Type="real" />
+  </EntityType>
+  <EntityContainer Name="ElektrikaModelStoreContainer">
+    <EntitySet Name="Meritve" EntityType="Self.Meritve" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

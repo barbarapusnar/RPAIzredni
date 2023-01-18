@@ -1,0 +1,8 @@
+D:\RPAIzredni\VajaFuncDelegat\VajaFuncDelegat\bin\Debug\VajaFuncDelegat.exe.config
+D:\RPAIzredni\VajaFuncDelegat\VajaFuncDelegat\bin\Debug\VajaFuncDelegat.exe
+D:\RPAIzredni\VajaFuncDelegat\VajaFuncDelegat\bin\Debug\VajaFuncDelegat.pdb
+D:\RPAIzredni\VajaFuncDelegat\VajaFuncDelegat\obj\Debug\VajaFuncDelegat.csproj.AssemblyReference.cache
+D:\RPAIzredni\VajaFuncDelegat\VajaFuncDelegat\obj\Debug\VajaFuncDelegat.csproj.SuggestedBindingRedirects.cache
+D:\RPAIzredni\VajaFuncDelegat\VajaFuncDelegat\obj\Debug\VajaFuncDelegat.csproj.CoreCompileInputs.cache
+D:\RPAIzredni\VajaFuncDelegat\VajaFuncDelegat\obj\Debug\VajaFuncDelegat.exe
+D:\RPAIzredni\VajaFuncDelegat\VajaFuncDelegat\obj\Debug\VajaFuncDelegat.pdb

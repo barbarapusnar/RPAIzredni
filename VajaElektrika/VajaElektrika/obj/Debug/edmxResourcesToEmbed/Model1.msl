@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ElektrikaModelStoreContainer" CdmEntityContainer="ElektrikaEntities1">
+    <EntitySetMapping Name="Meritve">
+      <EntityTypeMapping TypeName="ElektrikaModel.Meritve">
+        <MappingFragment StoreEntitySet="Meritve">
+          <ScalarProperty Name="ZapisID" ColumnName="ZapisID" />
+          <ScalarProperty Name="ZapisČas" ColumnName="ZapisČas" />
+          <ScalarProperty Name="V1" ColumnName="V1" />
+          <ScalarProperty Name="A1" ColumnName="A1" />
+          <ScalarProperty Name="kW1" ColumnName="kW1" />
+          <ScalarProperty Name="V2" ColumnName="V2" />
+          <ScalarProperty Name="A2" ColumnName="A2" />
+          <ScalarProperty Name="kW2" ColumnName="kW2" />
+          <ScalarProperty Name="V3" ColumnName="V3" />
+          <ScalarProperty Name="A3" ColumnName="A3" />
+          <ScalarProperty Name="kW3" ColumnName="kW3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

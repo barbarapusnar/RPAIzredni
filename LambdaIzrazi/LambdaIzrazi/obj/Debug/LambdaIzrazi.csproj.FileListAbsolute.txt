@@ -1,0 +1,8 @@
+D:\RPAIzredni\LambdaIzrazi\LambdaIzrazi\bin\Debug\LambdaIzrazi.exe.config
+D:\RPAIzredni\LambdaIzrazi\LambdaIzrazi\bin\Debug\LambdaIzrazi.exe
+D:\RPAIzredni\LambdaIzrazi\LambdaIzrazi\bin\Debug\LambdaIzrazi.pdb
+D:\RPAIzredni\LambdaIzrazi\LambdaIzrazi\obj\Debug\LambdaIzrazi.csproj.AssemblyReference.cache
+D:\RPAIzredni\LambdaIzrazi\LambdaIzrazi\obj\Debug\LambdaIzrazi.csproj.SuggestedBindingRedirects.cache
+D:\RPAIzredni\LambdaIzrazi\LambdaIzrazi\obj\Debug\LambdaIzrazi.csproj.CoreCompileInputs.cache
+D:\RPAIzredni\LambdaIzrazi\LambdaIzrazi\obj\Debug\LambdaIzrazi.exe
+D:\RPAIzredni\LambdaIzrazi\LambdaIzrazi\obj\Debug\LambdaIzrazi.pdb

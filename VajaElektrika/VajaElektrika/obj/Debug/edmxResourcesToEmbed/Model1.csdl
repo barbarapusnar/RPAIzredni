@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ElektrikaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Meritve">
+    <Key>
+      <PropertyRef Name="ZapisID" />
+    </Key>
+    <Property Name="ZapisID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ZapisČas" Type="DateTime" Precision="3" />
+    <Property Name="V1" Type="Single" />
+    <Property Name="A1" Type="Single" />
+    <Property Name="kW1" Type="Single" />
+    <Property Name="V2" Type="Single" />
+    <Property Name="A2" Type="Single" />
+    <Property Name="kW2" Type="Single" />
+    <Property Name="V3" Type="Single" />
+    <Property Name="A3" Type="Single" />
+    <Property Name="kW3" Type="Single" />
+  </EntityType>
+  <EntityContainer Name="ElektrikaEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Meritve" EntityType="Self.Meritve" />
+  </EntityContainer>
+</Schema>
