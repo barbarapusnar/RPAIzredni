@@ -1,0 +1,5 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MVCFilmi/MVCFilmi/App_Data/MVCFilmiContext-20230119172424.mdf
