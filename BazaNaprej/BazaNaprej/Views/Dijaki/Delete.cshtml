@@ -1,0 +1,112 @@
+﻿@model BazaNaprej.Models.Dijak
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Dijak</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DijIme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijIme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DijPriimek)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijPriimek)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DijDatumRojstva)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijDatumRojstva)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DijaSlika)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijaSlika)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DijIDNadDatum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijIDNadDatum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DijIDNadUstanova)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijIDNadUstanova)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DijIDNadPotrditev)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijIDNadPotrditev)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DijMati)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijMati)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DijOče)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DijOče)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Razredniki.RazImePriimek)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Razredniki.RazImePriimek)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "TestRazorja";
+}
+@model DrugaMVC.Models.Student
+<h2>Podatki o študentu</h2>
+<ul>
+    <li>ID: @Model.Id</li>
+    <li>Ime: @Model.Ime</li>
+    <li>Starost: @Model.Starost</li>
+</ul>
+
+
+
+@*<h1>Test razorja</h1>
+    <h2>@DateTime.Now.ToShortDateString()</h2>
+    @{
+        var datum = DateTime.Now.ToShortDateString();
+        var message = "Pozdravljen svet";
+    }
+
+    <h1>Danes je @datum</h1>
+    <h3>@message</h3>*@
+
+@*@{
+
+    var datum = DateTime.Now.ToShortDateString();
+    var message = "Pozdravljen svet";
+    <text>Danes je </text>@datum
+    <br />
+    @message
+    <br/>
+}
+@if (DateTime.IsLeapYear(DateTime.Now.Year))
+{
+    @DateTime.Now.Year <text>Je prestopno leto</text>
+}
+else
+{
+    @DateTime.Now.Year <text>Ni prestopno leto</text>
+}
+@for (int k = 0; k < 10; k++)
+{
+    @k.ToString() <br/>
+}*@
+
+

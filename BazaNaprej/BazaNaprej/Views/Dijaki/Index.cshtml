@@ -1,0 +1,89 @@
+﻿@model IEnumerable<BazaNaprej.Models.Dijak>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DijIme)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DijPriimek)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DijDatumRojstva)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.DijIDNadDatum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DijIDNadUstanova)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DijIDNadPotrditev)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DijMati)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DijOče)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Razredniki.RazImePriimek)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DijIme)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DijPriimek)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DijDatumRojstva)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.DijIDNadDatum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DijIDNadUstanova)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DijIDNadPotrditev)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DijMati)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DijOče)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Razredniki.RazImePriimek)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DijID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DijID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DijID })
+        </td>
+    </tr>
+}
+
+</table>

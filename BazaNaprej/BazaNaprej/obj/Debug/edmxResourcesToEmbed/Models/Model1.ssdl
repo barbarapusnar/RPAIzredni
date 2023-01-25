@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Dijak">
+    <Key>
+      <PropertyRef Name="DijID" />
+    </Key>
+    <Property Name="DijID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DijIme" Type="nvarchar" MaxLength="50" />
+    <Property Name="DijPriimek" Type="nvarchar" MaxLength="50" />
+    <Property Name="DijRazred" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="DijDatumRojstva" Type="date" />
+    <Property Name="DijaSlika" Type="image" />
+    <Property Name="DijIDNadDatum" Type="date" />
+    <Property Name="DijIDNadUstanova" Type="nvarchar" MaxLength="50" />
+    <Property Name="DijIDNadPotrditev" Type="date" />
+    <Property Name="DijMati" Type="nvarchar" MaxLength="50" />
+    <Property Name="DijOče" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="DijakPodročje">
+    <Key>
+      <PropertyRef Name="DijID" />
+      <PropertyRef Name="PodID" />
+    </Key>
+    <Property Name="DijID" Type="int" Nullable="false" />
+    <Property Name="PodID" Type="int" Nullable="false" />
+    <Property Name="DijPodTest" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Izvedba">
+    <Key>
+      <PropertyRef Name="IzvID" />
+    </Key>
+    <Property Name="IzvID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IzvDatum" Type="date" />
+    <Property Name="IzvMesec" Type="int" />
+    <Property Name="IzvLeto" Type="int" />
+    <Property Name="IzvOpis" Type="nvarchar(max)" />
+    <Property Name="IzvPodročje" Type="int" />
+    <Property Name="IzvUre" Type="int" />
+    <Property Name="IzvCilji" Type="nvarchar(max)" />
+    <Property Name="IzvUstanova" Type="nvarchar" MaxLength="250" />
+    <Property Name="IzvKraj" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="IzvedbaDijak">
+    <Key>
+      <PropertyRef Name="Izvedba" />
+      <PropertyRef Name="Dijak" />
+    </Key>
+    <Property Name="Izvedba" Type="int" Nullable="false" />
+    <Property Name="Dijak" Type="int" Nullable="false" />
+    <Property Name="brezVeze" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="IzvedbaMentor">
+    <Key>
+      <PropertyRef Name="Izvedba" />
+      <PropertyRef Name="Mentor" />
+    </Key>
+    <Property Name="Izvedba" Type="int" Nullable="false" />
+    <Property Name="Mentor" Type="int" Nullable="false" />
+    <Property Name="brezveze" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Mentor">
+    <Key>
+      <PropertyRef Name="MenId" />
+    </Key>
+    <Property Name="MenId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenIme" Type="nvarchar" MaxLength="50" />
+    <Property Name="MenPriimek" Type="nvarchar" MaxLength="50" />
+    <Property Name="MenSlika" Type="image" />
+    <Property Name="MenVloga" Type="nvarchar" MaxLength="50" />
+    <Property Name="MenNaziv" Type="nvarchar" MaxLength="50" />
+    <Property Name="MenUstanova" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="PlanDejavnosti">
+    <Key>
+      <PropertyRef Name="PlaId" />
+    </Key>
+    <Property Name="PlaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlaOpis" Type="nvarchar(max)" />
+    <Property Name="PlaŠtDijakov" Type="int" />
+    <Property Name="PlaCilji" Type="nvarchar(max)" />
+    <Property Name="PlaTrajanje" Type="nvarchar" MaxLength="50" />
+    <Property Name="PlaPodročje" Type="int" />
+  </EntityType>
+  <EntityType Name="PlanDijak">
+    <Key>
+      <PropertyRef Name="PlaID" />
+      <PropertyRef Name="DijID" />
+    </Key>
+    <Property Name="PlaID" Type="int" Nullable="false" />
+    <Property Name="DijID" Type="int" Nullable="false" />
+    <Property Name="BrezVeze" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="PlanSodelavci">
+    <Key>
+      <PropertyRef Name="PlaID" />
+      <PropertyRef Name="MenID" />
+    </Key>
+    <Property Name="PlaID" Type="int" Nullable="false" />
+    <Property Name="MenID" Type="int" Nullable="false" />
+    <Property Name="brezveze" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Področja">
+    <Key>
+      <PropertyRef Name="PodID" />
+    </Key>
+    <Property Name="PodID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PodIme" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Razredniki">
+    <Key>
+      <PropertyRef Name="RazRazred" />
+    </Key>
+    <Property Name="RazRazred" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="RazImePriimek" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Slike">
+    <Key>
+      <PropertyRef Name="IDSlika" />
+    </Key>
+    <Property Name="IDSlika" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IzvedbaID" Type="int" />
+    <Property Name="SlikaSl" Type="image" />
+  </EntityType>
+  <Association Name="FK_Dijak_Razrednik">
+    <End Role="Razredniki" Type="Self.Razredniki" Multiplicity="1" />
+    <End Role="Dijak" Type="Self.Dijak" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Razredniki">
+        <PropertyRef Name="RazRazred" />
+      </Principal>
+      <Dependent Role="Dijak">
+        <PropertyRef Name="DijRazred" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DijakPodročje_Dijak">
+    <End Role="Dijak" Type="Self.Dijak" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DijakPodročje" Type="Self.DijakPodročje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dijak">
+        <PropertyRef Name="DijID" />
+      </Principal>
+      <Dependent Role="DijakPodročje">
+        <PropertyRef Name="DijID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DijakPodročje_Področja">
+    <End Role="Področja" Type="Self.Področja" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DijakPodročje" Type="Self.DijakPodročje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Področja">
+        <PropertyRef Name="PodID" />
+      </Principal>
+      <Dependent Role="DijakPodročje">
+        <PropertyRef Name="PodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Izvedba_Področja">
+    <End Role="Področja" Type="Self.Področja" Multiplicity="0..1" />
+    <End Role="Izvedba" Type="Self.Izvedba" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Področja">
+        <PropertyRef Name="PodID" />
+      </Principal>
+      <Dependent Role="Izvedba">
+        <PropertyRef Name="IzvPodročje" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IzvedbaDijak_Dijak">
+    <End Role="Dijak" Type="Self.Dijak" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IzvedbaDijak" Type="Self.IzvedbaDijak" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dijak">
+        <PropertyRef Name="DijID" />
+      </Principal>
+      <Dependent Role="IzvedbaDijak">
+        <PropertyRef Name="Dijak" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IzvedbaDijak_Izvedba">
+    <End Role="Izvedba" Type="Self.Izvedba" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IzvedbaDijak" Type="Self.IzvedbaDijak" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Izvedba">
+        <PropertyRef Name="IzvID" />
+      </Principal>
+      <Dependent Role="IzvedbaDijak">
+        <PropertyRef Name="Izvedba" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IzvedbaMentor_Izvedba">
+    <End Role="Izvedba" Type="Self.Izvedba" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IzvedbaMentor" Type="Self.IzvedbaMentor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Izvedba">
+        <PropertyRef Name="IzvID" />
+      </Principal>
+      <Dependent Role="IzvedbaMentor">
+        <PropertyRef Name="Izvedba" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IzvedbaMentor_Mentor">
+    <End Role="Mentor" Type="Self.Mentor" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IzvedbaMentor" Type="Self.IzvedbaMentor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mentor">
+        <PropertyRef Name="MenId" />
+      </Principal>
+      <Dependent Role="IzvedbaMentor">
+        <PropertyRef Name="Mentor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanDejavnosti_Področja">
+    <End Role="Področja" Type="Self.Področja" Multiplicity="0..1" />
+    <End Role="PlanDejavnosti" Type="Self.PlanDejavnosti" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Področja">
+        <PropertyRef Name="PodID" />
+      </Principal>
+      <Dependent Role="PlanDejavnosti">
+        <PropertyRef Name="PlaPodročje" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanDijak_Dijak">
+    <End Role="Dijak" Type="Self.Dijak" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PlanDijak" Type="Self.PlanDijak" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dijak">
+        <PropertyRef Name="DijID" />
+      </Principal>
+      <Dependent Role="PlanDijak">
+        <PropertyRef Name="DijID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanDijak_PlanDejavnosti">
+    <End Role="PlanDejavnosti" Type="Self.PlanDejavnosti" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PlanDijak" Type="Self.PlanDijak" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanDejavnosti">
+        <PropertyRef Name="PlaId" />
+      </Principal>
+      <Dependent Role="PlanDijak">
+        <PropertyRef Name="PlaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanSodelavci_Mentor">
+    <End Role="Mentor" Type="Self.Mentor" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PlanSodelavci" Type="Self.PlanSodelavci" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mentor">
+        <PropertyRef Name="MenId" />
+      </Principal>
+      <Dependent Role="PlanSodelavci">
+        <PropertyRef Name="MenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanSodelavci_PlanDejavnosti">
+    <End Role="PlanDejavnosti" Type="Self.PlanDejavnosti" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PlanSodelavci" Type="Self.PlanSodelavci" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanDejavnosti">
+        <PropertyRef Name="PlaId" />
+      </Principal>
+      <Dependent Role="PlanSodelavci">
+        <PropertyRef Name="PlaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Slika_Izvedba">
+    <End Role="Izvedba" Type="Self.Izvedba" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Slike" Type="Self.Slike" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Izvedba">
+        <PropertyRef Name="IzvID" />
+      </Principal>
+      <Dependent Role="Slike">
+        <PropertyRef Name="IzvedbaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Dijak" EntityType="Self.Dijak" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DijakPodročje" EntityType="Self.DijakPodročje" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Izvedba" EntityType="Self.Izvedba" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IzvedbaDijak" EntityType="Self.IzvedbaDijak" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IzvedbaMentor" EntityType="Self.IzvedbaMentor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mentor" EntityType="Self.Mentor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlanDejavnosti" EntityType="Self.PlanDejavnosti" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlanDijak" EntityType="Self.PlanDijak" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlanSodelavci" EntityType="Self.PlanSodelavci" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Področja" EntityType="Self.Področja" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Razredniki" EntityType="Self.Razredniki" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Slike" EntityType="Self.Slike" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Dijak_Razrednik" Association="Self.FK_Dijak_Razrednik">
+      <End Role="Razredniki" EntitySet="Razredniki" />
+      <End Role="Dijak" EntitySet="Dijak" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DijakPodročje_Dijak" Association="Self.FK_DijakPodročje_Dijak">
+      <End Role="Dijak" EntitySet="Dijak" />
+      <End Role="DijakPodročje" EntitySet="DijakPodročje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DijakPodročje_Področja" Association="Self.FK_DijakPodročje_Področja">
+      <End Role="Področja" EntitySet="Področja" />
+      <End Role="DijakPodročje" EntitySet="DijakPodročje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Izvedba_Področja" Association="Self.FK_Izvedba_Področja">
+      <End Role="Področja" EntitySet="Področja" />
+      <End Role="Izvedba" EntitySet="Izvedba" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IzvedbaDijak_Dijak" Association="Self.FK_IzvedbaDijak_Dijak">
+      <End Role="Dijak" EntitySet="Dijak" />
+      <End Role="IzvedbaDijak" EntitySet="IzvedbaDijak" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IzvedbaDijak_Izvedba" Association="Self.FK_IzvedbaDijak_Izvedba">
+      <End Role="Izvedba" EntitySet="Izvedba" />
+      <End Role="IzvedbaDijak" EntitySet="IzvedbaDijak" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IzvedbaMentor_Izvedba" Association="Self.FK_IzvedbaMentor_Izvedba">
+      <End Role="Izvedba" EntitySet="Izvedba" />
+      <End Role="IzvedbaMentor" EntitySet="IzvedbaMentor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IzvedbaMentor_Mentor" Association="Self.FK_IzvedbaMentor_Mentor">
+      <End Role="Mentor" EntitySet="Mentor" />
+      <End Role="IzvedbaMentor" EntitySet="IzvedbaMentor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanDejavnosti_Področja" Association="Self.FK_PlanDejavnosti_Področja">
+      <End Role="Področja" EntitySet="Področja" />
+      <End Role="PlanDejavnosti" EntitySet="PlanDejavnosti" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanDijak_Dijak" Association="Self.FK_PlanDijak_Dijak">
+      <End Role="Dijak" EntitySet="Dijak" />
+      <End Role="PlanDijak" EntitySet="PlanDijak" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanDijak_PlanDejavnosti" Association="Self.FK_PlanDijak_PlanDejavnosti">
+      <End Role="PlanDejavnosti" EntitySet="PlanDejavnosti" />
+      <End Role="PlanDijak" EntitySet="PlanDijak" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanSodelavci_Mentor" Association="Self.FK_PlanSodelavci_Mentor">
+      <End Role="Mentor" EntitySet="Mentor" />
+      <End Role="PlanSodelavci" EntitySet="PlanSodelavci" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanSodelavci_PlanDejavnosti" Association="Self.FK_PlanSodelavci_PlanDejavnosti">
+      <End Role="PlanDejavnosti" EntitySet="PlanDejavnosti" />
+      <End Role="PlanSodelavci" EntitySet="PlanSodelavci" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Slika_Izvedba" Association="Self.FK_Slika_Izvedba">
+      <End Role="Izvedba" EntitySet="Izvedba" />
+      <End Role="Slike" EntitySet="Slike" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

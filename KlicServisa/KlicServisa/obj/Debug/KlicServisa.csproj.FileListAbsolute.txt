@@ -1,0 +1,13 @@
+D:\RPAIzredni\KlicServisa\KlicServisa\bin\Debug\KlicServisa.exe.config
+D:\RPAIzredni\KlicServisa\KlicServisa\bin\Debug\KlicServisa.exe
+D:\RPAIzredni\KlicServisa\KlicServisa\bin\Debug\KlicServisa.pdb
+D:\RPAIzredni\KlicServisa\KlicServisa\bin\Debug\Newtonsoft.Json.dll
+D:\RPAIzredni\KlicServisa\KlicServisa\bin\Debug\System.Net.Http.Formatting.dll
+D:\RPAIzredni\KlicServisa\KlicServisa\bin\Debug\Newtonsoft.Json.xml
+D:\RPAIzredni\KlicServisa\KlicServisa\bin\Debug\System.Net.Http.Formatting.xml
+D:\RPAIzredni\KlicServisa\KlicServisa\obj\Debug\KlicServisa.csproj.AssemblyReference.cache
+D:\RPAIzredni\KlicServisa\KlicServisa\obj\Debug\KlicServisa.csproj.SuggestedBindingRedirects.cache
+D:\RPAIzredni\KlicServisa\KlicServisa\obj\Debug\KlicServisa.csproj.CoreCompileInputs.cache
+D:\RPAIzredni\KlicServisa\KlicServisa\obj\Debug\KlicServisa.csproj.CopyComplete
+D:\RPAIzredni\KlicServisa\KlicServisa\obj\Debug\KlicServisa.exe
+D:\RPAIzredni\KlicServisa\KlicServisa\obj\Debug\KlicServisa.pdb
