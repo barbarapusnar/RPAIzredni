@@ -1,0 +1,8 @@
+D:\RPAIzredni\AsihroniTaski\AsihroniTaski\bin\Debug\AsihroniTaski.exe.config
+D:\RPAIzredni\AsihroniTaski\AsihroniTaski\bin\Debug\AsihroniTaski.exe
+D:\RPAIzredni\AsihroniTaski\AsihroniTaski\bin\Debug\AsihroniTaski.pdb
+D:\RPAIzredni\AsihroniTaski\AsihroniTaski\obj\Debug\AsihroniTaski.csproj.AssemblyReference.cache
+D:\RPAIzredni\AsihroniTaski\AsihroniTaski\obj\Debug\AsihroniTaski.csproj.SuggestedBindingRedirects.cache
+D:\RPAIzredni\AsihroniTaski\AsihroniTaski\obj\Debug\AsihroniTaski.csproj.CoreCompileInputs.cache
+D:\RPAIzredni\AsihroniTaski\AsihroniTaski\obj\Debug\AsihroniTaski.exe
+D:\RPAIzredni\AsihroniTaski\AsihroniTaski\obj\Debug\AsihroniTaski.pdb

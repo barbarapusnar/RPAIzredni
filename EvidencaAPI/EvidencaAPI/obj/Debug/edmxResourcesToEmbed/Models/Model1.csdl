@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Mentor">
+    <Key>
+      <PropertyRef Name="MenId" />
+    </Key>
+    <Property Name="MenId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MenIme" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MenPriimek" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MenSlika" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="MenVloga" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MenNaziv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MenUstanova" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="Guid" />
+  </EntityType>
+  <EntityContainer Name="Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Mentor" EntityType="Self.Mentor" />
+  </EntityContainer>
+</Schema>

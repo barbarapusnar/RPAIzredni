@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Mentor">
+    <Key>
+      <PropertyRef Name="MenId" />
+    </Key>
+    <Property Name="MenId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenIme" Type="nvarchar" MaxLength="50" />
+    <Property Name="MenPriimek" Type="nvarchar" MaxLength="50" />
+    <Property Name="MenSlika" Type="image" />
+    <Property Name="MenVloga" Type="nvarchar" MaxLength="50" />
+    <Property Name="MenNaziv" Type="nvarchar" MaxLength="50" />
+    <Property Name="MenUstanova" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Mentor" EntityType="Self.Mentor" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
